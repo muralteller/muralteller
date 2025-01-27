@@ -153,3 +153,9 @@ def sha256(message: bytes) -> str:
         H = process_block(block, H, K)
 
     return "".join(f"{x:08x}" for x in H)
+
+
+message = b"Hello, message"
+print(f"Original Text: '{message}'")
+print(f"SHA-256 Text: '{sha256(message)}'")
+
